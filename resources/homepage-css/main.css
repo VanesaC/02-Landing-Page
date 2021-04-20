@@ -1,6 +1,6 @@
 
-@import 'media-query.css';
-@import 'blog-posts.css';
+@import 'resources/homepage-css/media-query.css';
+@import 'resources/homepage-css/blog-posts.css';
 
 @font-face {
     font-family: 'MontserratItalic';
