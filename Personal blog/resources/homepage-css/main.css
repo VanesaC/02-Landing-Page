@@ -1,0 +1,91 @@
+
+@import 'media-query.css';
+@import 'blog-posts.css';
+
+@font-face {
+    font-family: 'MontserratItalic';
+    src: url('../fonts/Montserrat-MediumItalic.ttf') format('truetype');
+}
+
+body {
+    background-color: #fde2e2;
+    margin: 0;
+}
+
+.links-header {
+    color: #000;
+    text-decoration: none;
+    font-family: "Montserrat";
+}
+
+.button {
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: "Montserrat";
+    letter-spacing: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.post-link:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+.split-background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: -100;
+}
+
+.container {
+    /* Step 1: Set display to grid */
+    display: grid;
+    /* Step 2: setup rows amd columns */
+    grid-template-columns: 1fr;
+    grid-template-areas: "hd" "sd" "ft";
+    z-index: 2;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
+
+.header {
+    grid-area: hd;
+}
+
+.footer {
+    grid-area: ft;
+    background-color: #000;
+}
+
+.content {
+    grid-area: sd;
+}
+
+span {
+    font-weight: 650;
+}
+
+.intro {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
