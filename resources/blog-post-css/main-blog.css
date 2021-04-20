@@ -46,6 +46,12 @@ body {
     background-color: #000;
 }
 
+figcaption{
+    margin-left:34%;
+    font-family: "Montserrat";
+    font-size: 1vw;
+}
+
 .return{
   text-align: center;
   margin-top:30px;

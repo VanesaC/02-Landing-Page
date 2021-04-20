@@ -20,7 +20,7 @@ h2 {
 @media(max-width: 599px) {
 
     .container {
-      grid-template-rows: 100px 748px 80px;
+      grid-template-rows: 100px 1fr 80px;
     }
 
     .blog-posts {
@@ -28,14 +28,14 @@ h2 {
     }
 
     .post {
-        width: 201px;
-        height: 107px;
+        width: 301px;
+        height: 130px;
         background-color: #000;
         margin: 2%;
     }
 
     .left-line {
-        height: 107px;
+        height: 130px;
         width: 20px;
         background-color: #c88282;
         position: absolute;
@@ -44,7 +44,7 @@ h2 {
 
     .bg-title {
         height: 70px;
-        width: 120px;
+        width: 160px;
         background-color: #fff;
         border-radius: 5px;
         text-align: center;

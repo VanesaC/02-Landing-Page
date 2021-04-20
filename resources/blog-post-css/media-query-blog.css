@@ -110,7 +110,7 @@
         margin-top: 6%;
     }
 /* ---------------------------------------> typography */
-    p {
+    p, blockquote {
         color: #000;
         font-family: "Montserrat";
         font-size: 10px;
@@ -249,7 +249,7 @@
    }
 
 /* ---------------------------------------> typography */
-    p {
+    p, blockquote {
         color: #000;
         font-family: "Montserrat";
         font-size: 14px;
@@ -393,7 +393,7 @@
     .footer-nav {
         margin-top: 25px;
    }
-   
+
 /* ---------------------------------------> typography */
     h1 {
         color: #c88282;
@@ -443,7 +443,7 @@
         line-height: 160%;
     }
 
-    p {
+    p, blockquote {
         color: #000;
         font-family: "Montserrat";
         font-size: 14px;
