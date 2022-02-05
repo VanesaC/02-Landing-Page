@@ -1,140 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>art & moss</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/homepage-css/main.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Manipulating the DOM</title>
+    <!-- Load Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
-
   <body>
-
-    <div class="split-background"></div><!--Used to create a two color background-->
-
-    <div class = "container">
-
-      <nav class="header box">
-        <a href="#" class="links-header">ARCHIVE</a>
-        <a href="#"class="links-header">RESOURCES</a>
-        <img src="resources/images/logo.png" alt="Logo"/>
-        <a href="#"class="links-header">ABOUT US</a>
-        <a href="#"class="links-header">CONTACT</a>
+    <!-- HTML Follows BEM naming conventions
+  IDs are only used for sections to connect menu achors to sections -->
+    <header class="page__header sticky">
+      <nav class="navar__logo">
+        <img src="css/images/LOGO.png" alt="logo" id="logo" width="160px" />
       </nav>
 
-      <main class="content">
+      <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list"></ul>
+      </nav>
+    </header>
 
-        <header class="intro">
-
-          <div class="intro-text">
-            <h1>art & moss was born out of <b>love for art, history and storytelling.</b><br> We are a team of 4 people dedicated to bringing you information in a compact and accesible way
-            so that you can expand your knowledge of <em>art history.</em> <br><br><span>Subscribe now so that you can always be up to date!</span> </h1>
-            <a href="#" class="button">SUBSCRIBE</a>
+    <main>
+      <header class="main__hero">
+        <div class="hero_container">
+          <img src="css/images/heroImage.png" alt="hero image" id="heroImage" />
+          <div class="hero_text">
+            <!-- <h1>WITH OVER A DECADE IN THE MEDIA INDUSTRY,<br /></h1> -->
+            <h2>We make dreams come true<br /></h2>
+            <h3>and we create possibilities.</h3>
           </div>
+        </div>
+      </header>
+      <!-- Each Section has an ID (used for the anchor) and
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+      <section
+        id="section1"
+        data-nav="Section 1"
+        class="your-active-class leftImage"
+      >
+        <div class="landing__container">
+          <img
+            class="paraImagesOdd"
+            src="css/images/photo1.png"
+            alt="image of services"
+          />
+          <div class="landing__container_text">
+            <h1>Photography services</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+              potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+              lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+              convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+              eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+              nunc eu augue. Pellentesque maximus imperdiet elit a pharetra.
+              Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi
+              a tincidunt felis. Sed leo nunc, pharetra et elementum non,
+              faucibus vitae elit.
+            </p>
+            <a href="#" class="myButton">Find out more</a>
+          </div>
+          <!-- closes landing__container_text-->
+        </div>
+      </section>
 
-         <img src="resources/images/intro-pic.png" alt="About us"/>
+      <section id="section2" data-nav="Section 2" class="rightImage">
+        <div class="landing__container">
+          <div class="landing__container_text">
+            <h1>Video production</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+              potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+              lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+              convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+              eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+              nunc eu augue. Pellentesque maximus imperdiet elit a pharetra.
+              Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi
+              a tincidunt felis. Sed leo nunc, pharetra et elementum non,
+              faucibus vitae elit.
+            </p>
+            <a href="#" class="myButton">Find out more</a>
+          </div>
+          <!-- closes landing__container_text-->
+          <img
+            class="paraImagesOdd"
+            src="css/images/photo2.png"
+            alt="image of services"
+          />
+        </div>
+      </section>
 
-       </header><!--closes intro-->
+      <section id="section3" data-nav="Section 3" class="leftImage">
+        <div class="landing__container">
+          <img
+            class="paraImagesOdd"
+            src="css/images/photo3.png"
+            alt="image of services"
+            width="440px"
+          />
+          <div class="landing__container_text">
+            <h1>Training and workshops</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+              potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+              lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+              convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+              eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+              nunc eu augue. Pellentesque maximus imperdiet elit a pharetra.
+              Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi
+              a tincidunt felis. Sed leo nunc, pharetra et elementum non,
+              faucibus vitae elit.
+            </p>
+            <a href="#" class="myButton">Find out more</a>
+          </div>
+          <!-- closes landing__container_text-->
+        </div>
+      </section>
 
-       <div class="blog-posts">
-           <article class="post post-one">
-               <!--      begin articles        -->
-               <div class="left-line"></div>
-               <a href="post-one.html" class="post-link">
-                   <div class="bg-title">
-                       <h2>The Influence of Modern Art</h2>
-                       <h3>26.03.2021</h3>
-                       <h4>5 mins read</h4>
-                   </div>
-               </a>
-           </article>
-           <article class="post post-two">
-               <div class="left-line"></div>
-               <a href="#" class="post-link">
-                   <div class="bg-title">
-                       <h2>The New York School</h2>
-                       <h3>11.03.2021</h3>
-                       <h4>8 mins read</h4>
-                   </div>
-               </a>
-           </article>
-           <article class="post post-three">
-               <div class="left-line"></div>
-               <a href="#" class="post-link">
-                   <div class="bg-title">
-                       <h2>Delicate Art Nouveau</h2>
-                       <h3>01.03.2021</h3>
-                       <h4>6 mins read</h4>
-                   </div>
-               </a>
-           </article>
-           <article class="post post-four">
-               <div class="left-line"></div>
-               <a href="#" class="post-link">
-                   <div class="bg-title">
-                       <h2>Pictorial Futurism</h2>
-                       <h3>21.02.2021</h3>
-                       <h4>5 mins read</h4>
-                   </div>
-               </a>
-           </article>
-           <article class="post post-five">
-               <div class="left-line"></div>
-               <a href="#" class="post-link">
-                   <div class="bg-title">
-                       <h2>Altering Expressionism</h2>
-                       <h3>04.02.2021</h3>
-                       <h4>8 mins read</h4>
-                   </div>
-               </a>
-           </article>
-           <article class="post post-six">
-               <div class="left-line"></div>
-               <a href="#" class="post-link">
-                   <div class="bg-title">
-                       <h2>Exuberant Baroque</h2>
-                       <h3>28.01.2021</h3>
-                       <h4>6 mins read</h4>
-                   </div>
-               </a>
-           </article>
-       </div>
-       <!-- closes blog posts-->
+      <section id="section4" data-nav="Section 2" class="rightImage">
+        <div class="landing__container">
+          <div class="landing__container_text">
+            <h1>Media appearances</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+              potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+              lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+              convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+              eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+              nunc eu augue. Pellentesque maximus imperdiet elit a pharetra.
+              Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi
+              a tincidunt felis. Sed leo nunc, pharetra et elementum non,
+              faucibus vitae elit.
+            </p>
+            <a href="#" class="myButton">Find out more</a>
+          </div>
+          <!-- closes landing__container_text-->
+          <img
+            class="paraImagesOdd"
+            src="css/images/photo4.png"
+            alt="image of services"
+          />
+        </div>
+      </section>
+    </main>
 
-       <div class="old-posts">Older posts</div>
+    <footer class="page__footer">
+      <p>&copy Udacity</p>
+    </footer>
 
-       <div class="previous">
-
-         <button class="prev-posts"><</button>
-         <button class="prev-posts">1</button>
-         <button class="prev-posts">2</button>
-         <button class="prev-posts">3</button>
-         <button class="prev-posts">4</button>
-         <button class="prev-posts">></button>
-
-       </div><!-- closes previous-->
-
-     </main><!-- closes content-->
-
-     <footer class="footer">
-
-       <nav class="footer-nav">
-         <p>Copyright @PixelsStudio 2021</p>
-         <img class="white-logo-footer" src="resources/images/logo_white.png" alt="Logo"/>
-         <div class="social">
-           <a href="#" class="social-link"><img class="social-footer" src="resources/images/instagram.png" alt="instagram"/></a>
-           <a href="#" class="social-link"><img class="social-footer" src="resources/images/facebook.png" alt="facebook"/></a>
-           <a href="#" class="social-link"><img class="social-footer" src="resources/images/pinterest.png" alt="pinterest"/></a>
-         </div>
-       </nav>
-
-     </footer>
-
-    </div><!--closes container-->
-
-
-
-
-
+    <script src="js/app.js"></script>
   </body>
 </html>

@@ -1,0 +1,415 @@
+@font-face {
+  font-family: "veneer";
+  src: url("../fonts/Veneer.ttf") format("truetype");
+}
+@font-face {
+  font-family: "histo";
+  src: url("../fonts/Historia Sky.ttf") format("truetype");
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "robotob";
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "angi";
+  src: url("../fonts/AngelicaJealous.ttf") format("truetype");
+}
+@font-face {
+  font-family: "gilroy";
+  src: url("../fonts/Gilroy-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "futura";
+  src: url("../fonts/Futura Heavy font.ttf") format("truetype");
+}
+@font-face {
+  font-family: "futuraThin";
+  src: url("../fonts/futura medium bt.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+h1,
+h2,
+h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: normal;
+}
+body {
+  background-color: #e1e0de;
+}
+.page__header {
+  background-color: #131b44;
+  padding: 2vh;
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  margin-top: 10px;
+}
+.navbar__menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main__hero {
+  padding: 5%;
+}
+.hero_container {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  /* margin-top: 20px; */
+  text-decoration: none;
+}
+
+li {
+  color: #e1e0de;
+  list-style-type: none;
+  display: inline;
+  font-family: "futuraThin";
+  text-decoration: none;
+}
+*|*:any-link:not(svg|a) {
+  text-decoration: none;
+}
+a:-webkit-any-link {
+  color: inherit;
+  text-decoration: none;
+}
+.list-active-class {
+  background-color: #212e63;
+  border-radius: 26px;
+  display: inline-block;
+  font-family: "roboto";
+  font-size: 15px;
+
+  text-decoration: none;
+}
+.leftImage p {
+  color: #dfdedc;
+}
+.rightImage p {
+  color: #2f3d4f;
+}
+/* -------------------------------------------------------Button styling start */
+.myButton {
+  background-color: #131b44;
+  border-radius: 28px;
+  display: inline-block;
+  cursor: pointer;
+  color: #c7f3fe;
+  font-family: "futura";
+
+  text-decoration: none;
+  margin-top: 2vh;
+}
+
+.myButton:hover {
+  background-color: #c7f3fe;
+  color: #131b44;
+}
+
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+/* -------------------------------------------------------Button styling end */
+
+/*------------------------------------------------Media query 1 > 901px */
+@media (min-width: 901px) {
+  #logo {
+    width: 100px;
+  }
+  .hero_text {
+    margin-left: 2%;
+    margin-top: 4vw;
+  }
+  #heroImage {
+    width: 36%;
+  }
+  li {
+    margin: 8px;
+    font-size: 1.8vh;
+  }
+
+  h2 {
+    font-family: "angi";
+    font-size: 6.5vw;
+    color: #7d4031;
+  }
+
+  h3 {
+    font-size: 2.5vw;
+    margin-top: -9%;
+    color: #324f70;
+    font-family: "futura";
+  }
+  .leftImage h1,
+  .rightImage h1 {
+    font-family: "angi";
+    font-size: 6vw;
+    color: #131b44;
+  }
+
+  .leftImage {
+    background-color: #808d9d;
+    padding: 10% 10% 10% 10%;
+    color: #e1e0de;
+    font-size: 60px;
+  }
+
+  .rightImage {
+    background-color: #a2d0ea;
+    padding: 10%;
+    color: #e1e0de;
+    font-size: 60px;
+  }
+  .rightImage .paraImagesOdd {
+    margin-left: 2vw;
+  }
+  .landing__container {
+    display: flex;
+  }
+
+  .landing__container_text {
+    margin-left: 3vw;
+  }
+  .paraImagesOdd {
+    object-fit: contain;
+    width: 35%;
+  }
+
+  p {
+    font-family: "futuraThin";
+    line-height: 2em;
+    font-size: 16px;
+  }
+
+  .rightImage.landing__container_text {
+    margin-right: 3%;
+  }
+  .list-active-class {
+    padding: 12px 28px;
+  }
+  .myButton {
+    font-size: 17px;
+    padding: 16px 32px;
+  }
+}
+/*------------------------------------------------Media query 2 600px-900px*/
+@media (min-width: 600px) and (max-width: 900px) {
+  #logo {
+    width: 50px;
+  }
+
+  .hero_text {
+    margin-left: 2%;
+    margin-top: 4vw;
+  }
+  #heroImage {
+    width: 50%;
+  }
+
+  li {
+    margin: 12px;
+    font-size: 1.5vh;
+  }
+  .myButton {
+    border-radius: 14px;
+  }
+  h2 {
+    font-family: "angi";
+    font-size: 6.5vw;
+    color: #7d4031;
+  }
+
+  h3 {
+    font-size: 2.5vw;
+    margin-top: -9%;
+    color: #324f70;
+    font-family: "futura";
+  }
+  .leftImage h1,
+  .rightImage h1 {
+    font-family: "angi";
+    font-size: 10vw;
+    color: #131b44;
+  }
+  .leftImage {
+    background-color: #808d9d;
+    padding: 10%;
+    color: #e1e0de;
+    font-size: 18px;
+  }
+  .rightImage {
+    background-color: #a2d0ea;
+    padding: 10%;
+    color: #e1e0de;
+    font-size: 18px;
+  }
+  .paraImagesOdd {
+    object-fit: contain;
+    width: 45%;
+  }
+
+  p {
+    font-family: "futuraThin";
+    line-height: 2em;
+    font-size: 16px;
+  }
+  .list-active-class {
+    padding: 6px 14px;
+  }
+  .myButton {
+    font-size: 12px;
+    padding: 12px 24px;
+  }
+}
+
+/*------------------------------------------------Media query 3 <599px*/
+@media (max-width: 599px) {
+  #logo {
+    width: 50px;
+  }
+
+  .hero_text {
+    margin-left: 2%;
+    margin-top: 12vw;
+  }
+  #heroImage {
+    width: 60%;
+  }
+  li {
+    margin: 12px;
+    font-size: 1.2vh;
+  }
+  .myButton {
+    border-radius: 14px;
+  }
+  h2 {
+    font-family: "angi";
+    font-size: 6.5vw;
+    color: #7d4031;
+  }
+
+  h3 {
+    font-size: 2.5vw;
+    margin-top: -9%;
+    color: #324f70;
+    font-family: "futura";
+  }
+  .leftImage h1,
+  .rightImage h1 {
+    font-family: "angi";
+    font-size: 10vw;
+    color: #131b44;
+  }
+  .leftImage {
+    background-color: #808d9d;
+    padding: 10%;
+    color: #e1e0de;
+    font-size: 18px;
+  }
+  .rightImage {
+    background-color: #a2d0ea;
+    padding: 10%;
+    color: #e1e0de;
+    font-size: 18px;
+  }
+  .paraImagesOdd {
+    object-fit: contain;
+    width: 65%;
+  }
+
+  p {
+    font-family: "futuraThin";
+    line-height: 2em;
+    font-size: 10px;
+  }
+  .list-active-class {
+    padding: 6px 14px;
+  }
+  .myButton {
+    font-size: 9px;
+    padding: 12px 24px;
+  }
+  /* .landing__container {
+    padding: 30%;
+  } */
+}
+
+.rightImage img {
+  display: inline-block;
+}
+.page__footer {
+  background-color: #131b44;
+  height: 4vh;
+  display: flex;
+  justify-content: center;
+}
+.page__footer p {
+  padding: 5px;
+  font-family: "futuraThin";
+  color: #dfdedc;
+  font-size: 12px;
+}
+
+a:active {
+  color: black;
+  text-decoration: none;
+}
+:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a,
+u {
+  text-decoration: none !important;
+}
+
+/* ---- Theme State Rules ---- */
+/* -----------------------------------------------------Section Active Styles */
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+section.your-active-class {
+  background: linear-gradient(#c7f3fe 0%, #5a628f 100%);
+}
+
+section.your-active-class .landing__container::before {
+  opacity: 1;
+  animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.your-active-class .landing__container::after {
+  opacity: 1;
+  animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translate(-1em) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-1em) rotate(-360deg);
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
