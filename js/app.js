@@ -80,9 +80,9 @@ document.addEventListener("scroll", function () {
 
 // ----------------------------------------Make header sticky
 $(window).scroll(function () {
-  var sticky = $(".sticky"),
-    scroll = $(window).scrollTop();
+  let sticky = $(".sticky")
+  let scroll = $(window).scrollTop();
 
   if (scroll >= 100) sticky.classList.add("fixed");
-  else sticky.removeClass("fixed");
+  else sticky.classList.remove("fixed");
 });
