@@ -83,6 +83,6 @@ $(window).scroll(function () {
   let sticky = $(".sticky")
   let scroll = $(window).scrollTop();
 
-  if (scroll >= 100) sticky.classList.add("fixed");
+  if (scroll > 800 && scroll<850) sticky.classList.add("fixed");
   else sticky.classList.remove("fixed");
 });
