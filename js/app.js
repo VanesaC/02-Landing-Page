@@ -51,12 +51,3 @@ let makeActive = () => {
 document.addEventListener("scroll", function () {
   makeActive();
 });
-
-// ----------------------------------------Make header sticky
-$(window).scroll(function () {
-  let sticky = $(".sticky");
-  let scroll = $(window).scrollTop();
-
-  if (scroll > 100) sticky.addClass("fixed");
-  else sticky.removeClass("fixed");
-});
