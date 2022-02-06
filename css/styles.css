@@ -63,7 +63,7 @@ body {
 }
 
 .main__hero {
-  padding: 5%;
+  padding: 10%;
 }
 .hero_container {
   display: flex;
@@ -214,7 +214,9 @@ a:-webkit-any-link {
   #logo {
     width: 50px;
   }
-
+  .hero_container {
+    padding: 50px;
+  }
   .hero_text {
     margin-left: 2%;
     margin-top: 4vw;
@@ -284,13 +286,15 @@ a:-webkit-any-link {
   #logo {
     width: 50px;
   }
-
+  .hero_container {
+    padding: 30px;
+  }
   .hero_text {
     margin-left: 2%;
     margin-top: 12vw;
   }
   #heroImage {
-    width: 60%;
+    width: 50%;
   }
   li {
     margin: 12px;
