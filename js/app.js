@@ -18,13 +18,7 @@ for (let i = 0; i < sections.length; i++) {
   list.appendChild(noua_lista);
 }
 // ---------------------------------------------------Build the list id's to add and remove active class
-// function buildListID(x) {
-//   let sectionIdString = String(x.id);
-//   let lastChar = sectionIdString.substr(sectionIdString.length - 1);
-//   let listIdBuild = `listItem${lastChar}`;
-//   let naviList = document.getElementById(listIdBuild);
-//   return naviList;
-// }
+
 let buildListID = (x) => {
   let sectionIdString = String(x.id);
   let lastChar = sectionIdString.substr(sectionIdString.length - 1);
@@ -33,26 +27,7 @@ let buildListID = (x) => {
   return naviList;
 };
 // ---------------------------------------------------Add functionality to distinguish the section in view
-// Add class 'active' to section when it is near top of viewport
-// function makeActive() {
-//   for (const section of sections) {
-//     const box = section.getBoundingClientRect();
 
-//     // You can play with the values in the "if" condition to further make it more accurate.
-//     if (box.top <= 250 && box.bottom >= 250) {
-//       // Apply active state on the current section and the corresponding Nav link.
-//       section.classList.add("your-active-class");
-
-//       let listId = buildListID(section);
-//       listId.classList.add("list-active-class");
-//     } else {
-//       section.classList.remove("your-active-class");
-
-//       let listId = buildListID(section);
-//       listId.classList.remove("list-active-class");
-//     }
-//   }
-// }
 let makeActive = () => {
   for (const section of sections) {
     const box = section.getBoundingClientRect();
