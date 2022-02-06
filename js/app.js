@@ -7,7 +7,6 @@ document.getElementsByTagName("head")[0].appendChild(script);
 let sections = document.querySelectorAll("section");
 
 let sections_name = document.querySelectorAll("h1");
-console.log(sections_name);
 let list = document.getElementById("navbar__list");
 
 for (let i = 0; i < sections.length; i++) {
@@ -80,9 +79,9 @@ document.addEventListener("scroll", function () {
 
 // ----------------------------------------Make header sticky
 $(window).scroll(function () {
-  let sticky = $(".sticky")
+  let sticky = $(".sticky");
   let scroll = $(window).scrollTop();
 
-  if (scroll > 800 && scroll<850) sticky.classList.add("fixed");
+  if (scroll > 800 && scroll < 850) sticky.classList.add("fixed");
   else sticky.classList.remove("fixed");
 });
