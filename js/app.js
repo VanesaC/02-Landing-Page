@@ -1,9 +1,9 @@
-var script = document.createElement("script");
-script.src = "https://code.jquery.com/jquery-3.4.1.min.js";
-script.type = "text/javascript";
-document.getElementsByTagName("head")[0].appendChild(script);
+// var script = document.createElement("script");
+// script.src = "https://code.jquery.com/jquery-3.4.1.min.js";
+// script.type = "text/javascript";
+// document.getElementsByTagName("head")[0].appendChild(script);
 
-// ---------------------------------------------------Build the navigation menu
+// ---------------------------------------------------Build the navigation menu + Smooth scrolling
 let sections = document.querySelectorAll("section");
 
 let sections_name = document.querySelectorAll("h1");
@@ -14,8 +14,22 @@ for (let i = 0; i < sections.length; i++) {
   let j = i + 1;
   noua_lista.innerHTML = `<li> <a href="#section${j}"> ${sections_name[i].innerHTML} </a></li>`;
   noua_lista.id = `listItem${j}`;
-
   list.appendChild(noua_lista);
+}
+
+for (let i = 0; i < sections.length; i++) {
+  let j = i + 1;
+  let element_section = document.getElementById(`section${j}`);
+  let element_list = document.getElementById(`listItem${j}`);
+  console.log("we here", element_section, element_list);
+  element_list.addEventListener("click", function (elem) {
+    elem.preventDefault();
+    element_section.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  });
 }
 // ---------------------------------------------------Build the list id's to add and remove active class
 
@@ -47,7 +61,21 @@ let makeActive = () => {
     }
   }
 };
-// ----------------------------------------Make sections active
+// // ----------------------------------------Scroll into view
+// let smoothScroll = () => {
+//   for (const section of sections) {
+//     let element = section.id;
+//     console.log(element);
+//     element.scrollIntoView({
+//       behavior: "smooth",
+//       block: "end",
+//       inline: "nearest",
+//     });
+//   }
+// };
+
+// // ----------------------------------------Make sections active
 document.addEventListener("scroll", function () {
   makeActive();
+  // smoothScroll();
 });
