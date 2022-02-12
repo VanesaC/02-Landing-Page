@@ -3,7 +3,7 @@
 // script.type = "text/javascript";
 // document.getElementsByTagName("head")[0].appendChild(script);
 
-// ---------------------------------------------------Build the navigation menu + Smooth scrolling
+// ---------------------------------------------------Build the navigation menu
 let sections = document.querySelectorAll("section");
 
 let sections_name = document.querySelectorAll("h1");
@@ -16,7 +16,7 @@ for (let i = 0; i < sections.length; i++) {
   noua_lista.id = `listItem${j}`;
   list.appendChild(noua_lista);
 }
-
+// ---------------------------------------------------Smooth scrolling functionality
 for (let i = 0; i < sections.length; i++) {
   let j = i + 1;
   let element_section = document.getElementById(`section${j}`);
