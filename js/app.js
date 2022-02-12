@@ -21,7 +21,7 @@ for (let i = 0; i < sections.length; i++) {
   let j = i + 1;
   let element_section = document.getElementById(`section${j}`);
   let element_list = document.getElementById(`listItem${j}`);
-  console.log("we here", element_section, element_list);
+  // console.log( element_section, element_list);
   element_list.addEventListener("click", function (elem) {
     elem.preventDefault();
     element_section.scrollIntoView({
