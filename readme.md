@@ -4,25 +4,25 @@
 
 * [Instructions](#instructions)
 
-## Instructions
+## General description of the project
+-the project is a landing page for a company that offers photography and video services
+-the repository contains the html file, css and javascript file
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+##List of what software, firmware and hardware you may require
+-nothing special
 
-To get started, open `js/app.js` and start building out the app's functionality
+##List of files included in the project
+css folder
+fonts folder
+javascript folder
+index filereadme file
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+##LCopyright and licensing information
+all images used are from Freepik
 
 
-1 General description of the project or content of the repository
+##Acknowledgements and credits for any resources or blogs that helped you create the project
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://www.w3schools.com/jsref/met_element_scrollintoview.asp
+Udacity
 
-2 List of what software, firmware and hardware you may require.
-
-3 Installation instructions for the software and firmware.
-
-4 List of files included in the project.
-
-5 Copyright and licensing information.
-
-6 Acknowledgements and credits for any resources or blogs that helped you create the project.
-
-7 Known bugs

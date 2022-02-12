@@ -1,8 +1,3 @@
-// var script = document.createElement("script");
-// script.src = "https://code.jquery.com/jquery-3.4.1.min.js";
-// script.type = "text/javascript";
-// document.getElementsByTagName("head")[0].appendChild(script);
-
 // ---------------------------------------------------Build the navigation menu
 let sections = document.querySelectorAll("section");
 
@@ -61,21 +56,8 @@ let makeActive = () => {
     }
   }
 };
-// // ----------------------------------------Scroll into view
-// let smoothScroll = () => {
-//   for (const section of sections) {
-//     let element = section.id;
-//     console.log(element);
-//     element.scrollIntoView({
-//       behavior: "smooth",
-//       block: "end",
-//       inline: "nearest",
-//     });
-//   }
-// };
 
 // // ----------------------------------------Make sections active
 document.addEventListener("scroll", function () {
   makeActive();
-  // smoothScroll();
 });

@@ -47,24 +47,15 @@ h3 {
 body {
   background-color: #e1e0de;
 }
-.page__header {
-  background-color: #131b44;
-  padding: 2vh;
-  display: flex;
-  justify-content: center;
-}
 
 #logo {
   margin-top: 10px;
 }
 .navbar__menu {
-  display: flex;
-  justify-content: space-around;
+  /* display: inline-block; */
+  /* justify-content: center; */
 }
 
-.main__hero {
-  padding: 10%;
-}
 .hero_container {
   display: flex;
   justify-content: center;
@@ -75,13 +66,6 @@ ul {
   text-decoration: none;
 }
 
-li {
-  color: #e1e0de;
-  list-style-type: none;
-  display: inline;
-  font-family: "futuraThin";
-  text-decoration: none;
-}
 *|*:any-link:not(svg|a) {
   text-decoration: none;
 }
@@ -127,11 +111,32 @@ a:-webkit-any-link {
   top: 1px;
 }
 /* -------------------------------------------------------Button styling end */
+/*------------------------------------------------Media query 0 */
+@media (min-width: 600px) {
+  .page__header {
+    background-color: #131b44;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  li {
+    color: #e1e0de;
+    list-style-type: none;
+    display: inline;
+    font-family: "futuraThin";
+    text-decoration: none;
+  }
+}
 
 /*------------------------------------------------Media query 1 > 901px */
 @media (min-width: 901px) {
   #logo {
     width: 100px;
+  }
+  .main__hero {
+    padding: 8%;
   }
   .hero_text {
     margin-left: 2%;
@@ -217,6 +222,9 @@ a:-webkit-any-link {
   .hero_container {
     padding: 50px;
   }
+  .main__hero {
+    padding: 6%;
+  }
   .hero_text {
     margin-left: 2%;
     margin-top: 4vw;
@@ -234,12 +242,12 @@ a:-webkit-any-link {
   }
   h2 {
     font-family: "angi";
-    font-size: 6.5vw;
+    font-size: 6vw;
     color: #7d4031;
   }
 
   h3 {
-    font-size: 2.5vw;
+    font-size: 2.2vw;
     margin-top: -9%;
     color: #324f70;
     font-family: "futura";
@@ -280,24 +288,46 @@ a:-webkit-any-link {
     padding: 12px 24px;
   }
 }
-
+@media (min-width: 599px) and (max-width: 900px) {
+  li {
+    margin: 5px;
+    font-size: 1.2vh;
+  }
+}
 /*------------------------------------------------Media query 3 <599px*/
 @media (max-width: 599px) {
   #logo {
     width: 50px;
   }
-  .hero_container {
-    padding: 30px;
+  .main__hero {
+    padding: 12%;
   }
   .hero_text {
     margin-left: 2%;
     margin-top: 12vw;
   }
+  .page__header {
+    background-color: #131b44;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  li {
+    color: #e1e0de;
+    list-style-type: none;
+    display: block;
+    font-family: "futuraThin";
+    text-decoration: none;
+  }
   #heroImage {
     width: 50%;
+    /* height: auto; */
   }
   li {
-    margin: 12px;
+    margin: 8px;
     font-size: 1.2vh;
   }
   .myButton {
@@ -305,12 +335,12 @@ a:-webkit-any-link {
   }
   h2 {
     font-family: "angi";
-    font-size: 6.5vw;
+    font-size: 6vw;
     color: #7d4031;
   }
 
   h3 {
-    font-size: 2.5vw;
+    font-size: 2vw;
     margin-top: -9%;
     color: #324f70;
     font-family: "futura";
@@ -344,7 +374,7 @@ a:-webkit-any-link {
     font-size: 10px;
   }
   .list-active-class {
-    padding: 6px 14px;
+    padding: 3px 6px;
   }
   .myButton {
     font-size: 9px;
@@ -418,7 +448,7 @@ section.your-active-class .landing__container::after {
   width: 100%;
 }
 .page__header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
